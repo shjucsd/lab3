@@ -3,6 +3,20 @@ import java.util.List;
 
 interface StringChecker { boolean checkString(String s); }
 
+class StringsCheck implements StringChecker{
+  String strToCheck;
+
+  StringsCheck(String strToCheck){
+    this.strToCheck = strToCheck;
+  }
+  public boolean checkString(String s){
+    if (s.contains(strToCheck)){
+      return true;
+    }
+    return false;
+  }
+}
+
 class ListExamples {
 
   // Returns a new list that has all the elements of the input list for which
